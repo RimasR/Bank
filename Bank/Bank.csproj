@@ -46,7 +46,8 @@
     <Compile Include="BankModel\CreditCard.cs" />
     <Compile Include="BankModel\CreditCardFactory.cs" />
     <Compile Include="BankModel\Client.cs" />
-    <Compile Include="BankModel\Repository.cs" />
+    <Compile Include="BankModel\AbstractClientRepository.cs" />
+    <Compile Include="BankModel\AbstractCreditCardRepository.cs" />
     <Compile Include="BankModel\AbstractRepositoryFactory.cs" />
     <Compile Include="Business\BusinessBlackCreditCard.cs" />
     <Compile Include="Business\BusinessClient.cs" />

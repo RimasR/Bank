@@ -1,7 +1,4 @@
-﻿using Bank.Business;
-using Bank.Models;
-using Bank.Personal;
-using Bank.Repositories;
+﻿using Bank.Repositories;
 
 namespace Bank.BankModel
 {
@@ -12,8 +9,8 @@ namespace Bank.BankModel
             return new RepositoryFactory();
         }
 
-        public abstract Repository GetClientRepository();
+        public abstract AbstractClientRepository GetClientRepository();
 
-        public abstract Repository GetCreditCardRepository();
+        public abstract AbstractCreditCardRepository GetCreditCardRepository();
     }
 }

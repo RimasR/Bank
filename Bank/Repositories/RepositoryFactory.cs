@@ -4,12 +4,12 @@ namespace Bank.Repositories
 {
     public class RepositoryFactory : AbstractRepositoryFactory
     {
-        public override Repository GetClientRepository()
+        public override AbstractClientRepository GetClientRepository()
         {
             return new ClientRepository();
         }
 
-        public override Repository GetCreditCardRepository()
+        public override AbstractCreditCardRepository GetCreditCardRepository()
         {
             return new CreditCardRepository();
         }

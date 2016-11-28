@@ -4,16 +4,16 @@ using Bank.BankModel;
 
 namespace Bank.Repositories
 {
-    public class CreditCardRepository : Repository
+    public class CreditCardRepository : AbstractCreditCardRepository
     {
-        private List<CreditCard> Items { get; set; }
+        private List<CreditCard> Items = new List<CreditCard>();
 
         public override void Add(object obj)
         {
             Items.Add((CreditCard)obj);
         }
 
-        public override object Get(string id)
+        public override CreditCard Get(string id)
         {
             return Items.FirstOrDefault(x => x.GetCcNumber() == id);
         }

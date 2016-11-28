@@ -1,19 +1,19 @@
-﻿using System.Collections.Generic;
+﻿using Bank.BankModel;
+using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using Bank.BankModel;
 
 namespace Bank.Repositories
 {
-    public class ClientRepository : Repository
+    public class ClientRepository : AbstractClientRepository
     {
-        public List<Client> Items { get; set; }
+        private List<Client> Items = new List<Client>();
+
         public override void Add(object obj)
         {
             Items.Add((Client)obj);
         }
 
-        public override object Get(string id)
+        public override Client Get(string id)
         {
             return Items.FirstOrDefault(x => x.Id == id);
         }
