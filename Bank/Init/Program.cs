@@ -10,10 +10,12 @@ namespace Bank.Init
     {
         private static void Main()
         {
-            CreditCardFactory creditCardFactory = CreditCardFactory.GetCreditCardFactory(ClientType.Business);
+
+            //Business creation
+            CreditCardAbstractFactory creditCardFactory = CreditCardAbstractFactory.GetCreditCardFactory(ClientType.Business);
 
             Client client = creditCardFactory.GetClient();
-            CreditCard card = creditCardFactory.GetCreditCard(CardType.Gold);
+            CreditCard card = creditCardFactory.GetCreditCard(CardType.Black);
 
             client.Id = "1";
 
@@ -29,6 +31,16 @@ namespace Bank.Init
             creditCardRepo.Add(card);
             clientRepo.Add(client);
             var client1 = clientRepo.Get(client.Id);
+            client1.AttachSubject(card);
+
+            var transaction = new Transaction()
+            {
+                FullName = "Rimantas Radziunas",
+                Id = "123",
+                Money = 123
+            };
+
+            card.SetState(transaction);
 
             Console.WriteLine(client1);
 

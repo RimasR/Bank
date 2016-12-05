@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Bank.BankModel;
 
 namespace Bank.Models
 {
@@ -6,9 +7,9 @@ namespace Bank.Models
     {
         private List<Observer> _observers = new List<Observer>();
 
-        public abstract void SetState(string state);
+        public abstract void SetState(Transaction state);
 
-        public abstract string GetState();
+        public abstract Transaction GetState();
 
         public void Attach(Observer observer)
         {

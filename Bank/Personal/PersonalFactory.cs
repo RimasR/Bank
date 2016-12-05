@@ -3,7 +3,7 @@ using Bank.Models;
 
 namespace Bank.Personal
 {
-    public class PersonalFactory : CreditCardFactory
+    public class PersonalFactory : CreditCardAbstractFactory
     {
         public override CreditCard GetCreditCard(CardType cardType)
         {

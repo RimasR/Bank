@@ -2,7 +2,7 @@
 
 namespace Bank.Business
 {
-    internal class BusinessClient : Client
+    public class BusinessClient : Client
     {
     }
 }

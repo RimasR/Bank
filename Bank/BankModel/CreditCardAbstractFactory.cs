@@ -4,9 +4,9 @@ using Bank.Personal;
 
 namespace Bank.BankModel
 {
-    public abstract class CreditCardFactory
+    public abstract class CreditCardAbstractFactory
     {
-        public static CreditCardFactory GetCreditCardFactory(ClientType clientType)
+        public static CreditCardAbstractFactory GetCreditCardFactory(ClientType clientType)
         {
             if (clientType == ClientType.Business)
             {
