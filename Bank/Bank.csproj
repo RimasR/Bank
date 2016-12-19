@@ -49,6 +49,13 @@
     <Compile Include="BankModel\AbstractClientRepository.cs" />
     <Compile Include="BankModel\AbstractCreditCardRepository.cs" />
     <Compile Include="BankModel\AbstractRepositoryFactory.cs" />
+    <Compile Include="CommandControler\CommandProcessor.cs" />
+    <Compile Include="CommandControler\CreateClient.cs" />
+    <Compile Include="CommandControler\CreateClientStats.cs" />
+    <Compile Include="CommandControler\CreateCreditCardCommand.cs" />
+    <Compile Include="CommandControler\CreateCreditCardView.cs" />
+    <Compile Include="CommandControler\ICommand.cs" />
+    <Compile Include="CommandControler\MakeTransaction.cs" />
     <Compile Include="Models\Transaction.cs" />
     <Compile Include="Business\BusinessBlackCreditCard.cs" />
     <Compile Include="Business\BusinessClient.cs" />

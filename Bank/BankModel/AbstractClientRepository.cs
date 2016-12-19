@@ -7,5 +7,7 @@
         public abstract Client Get(string id);
 
         public abstract void Remove(string id);
+
+        public abstract void ShowClients();
     }
 }

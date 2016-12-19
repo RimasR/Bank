@@ -6,6 +6,7 @@ namespace Bank.BankModel
     public class Client : Observer
     {
         public string Id;
+        public string FullName;
 
         public void AttachSubject(Subject subject)
         {

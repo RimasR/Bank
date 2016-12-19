@@ -6,16 +6,9 @@ namespace Bank.BankModel
 {
     public abstract class CreditCardAbstractFactory
     {
-        public static CreditCardAbstractFactory GetCreditCardFactory(ClientType clientType)
+        public static CreditCardAbstractFactory GetCreditCardFactory(object type)
         {
-            if (clientType == ClientType.Business)
-            {
-                return new BusinessFactory();
-            }
-            else
-            {
-                return new PersonalFactory();
-            }
+            return (CreditCardAbstractFactory)type;
         }
 
         public abstract CreditCard GetCreditCard(CardType cardType);

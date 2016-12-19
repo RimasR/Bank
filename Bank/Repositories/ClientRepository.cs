@@ -1,6 +1,7 @@
 ﻿using Bank.BankModel;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace Bank.Repositories
 {
@@ -21,6 +22,18 @@ namespace Bank.Repositories
         public override void Remove(string id)
         {
             Items.RemoveAll(x => x.Id == id);
+        }
+
+        public override void ShowClients()
+        {
+            foreach (var c in Items)
+            {
+                Console.WriteLine($"ClientRepo repo: ");
+                Console.WriteLine($"Id:          {c.Id}");
+                Console.WriteLine($"Full name:   {c.FullName}");
+                Console.WriteLine($"Enrolled in: {c.GetType()}");
+            }
+            Console.WriteLine("----------------------------------");
         }
     }
 }
